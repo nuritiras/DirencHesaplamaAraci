@@ -1,4 +1,5 @@
 # Direnc Hesaplama Araci
+![alt text](https://github.com/nuritiras/DirencHesaplamaAraci/blob/master/direnchesabi.jpeg)
 
 ### 4 BANTLI DİRENÇLER:
 Bantlardan ilk üçü direncin değerini, geri kalan bir tanesi ise toleransını göstermektedir.
