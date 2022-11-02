@@ -131,8 +131,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Altın",
-            "Gümüş",
-            "Yok"});
+            "Gümüş"});
             this.comboBox4.Location = new System.Drawing.Point(395, 236);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 33);
@@ -160,6 +159,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Hesapla";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
