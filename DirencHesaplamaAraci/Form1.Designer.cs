@@ -109,7 +109,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Siyah",
-            "Kahver",
+            "Kahve",
             "Kırmızı",
             "Turuncu",
             "Sarı",
