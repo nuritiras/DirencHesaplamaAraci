@@ -35,30 +35,39 @@ namespace DirencHesaplamaAraci
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double a1, a2, a3, a4, sonuc;
-            a1 = comboBox1.SelectedIndex;
-            a2 = comboBox2.SelectedIndex;
-            a3 = comboBox3.SelectedIndex;
-            a4 = comboBox4.SelectedIndex;
-            string toplam = a1 + a2.ToString();
+            double sonuc;
+            byte a1, a2, a3, a4;
+            a1 =Convert.ToByte(comboBox1.SelectedIndex);
+            a2 = Convert.ToByte(comboBox2.SelectedIndex);
+            a3 = Convert.ToByte(comboBox3.SelectedIndex);
+            a4 = Convert.ToByte(comboBox4.SelectedIndex);
+            string toplam = a1.ToString() + a2.ToString();
             sonuc = (Convert.ToDouble(toplam) * Math.Pow(10, a3));
 
             if (sonuc < 1000)
-                label1.Text = sonuc + " Ohm".ToString();
+                label2.Text = "Sonuç: "+sonuc.ToString() + " Ω";
             else if (sonuc < 1000000)
-                label1.Text = (sonuc / 1000) + " Kilo Ohm".ToString();
+                label2.Text = "Sonuç: "+(sonuc / 1000).ToString() + " KΩ";
             else if (sonuc < 1000000000)
-                label1.Text = (sonuc / 1000000) + " Mega Ohm".ToString();
+                label2.Text = "Sonuç: "+(sonuc / 1000000).ToString() + " MΩ";
             else if (sonuc < 1000000000000)
-                label1.Text = (sonuc / 1000000000) + " Giga Ohm".ToString();
+                label2.Text = "Sonuç: "+(sonuc / 1000000000).ToString() + " GΩ";
             else
-                label1.Text = "Hata";
+                label2.Text = "Hata";
 
             
              if (a4 == 0)
-                label2.Text = "Hata Payı %5";
+                label3.Text= "Hata Payı:"+" ±%5";
             else    
-                label2.Text = "Hata Payı %10";
+                label3.Text= "Hata Payı:" + " ±%10";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = 0;
         }
     }
 }
